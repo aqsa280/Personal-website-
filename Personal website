@@ -1,0 +1,242 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aqsa – Writer • Video Editor • Instagram Designer</title>
+  <meta name="description" content="Aqsa – freelance blog & article writer, short-form video editor, and Instagram post designer. Minimal, pastel aesthetic.">
+  <meta name="author" content="Aqsa">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aqsa – Writer • Video Editor • Instagram Designer">
+  <meta property="og:description" content="Freelance writing, video editing (shorts & reels), and Instagram post designing.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="" />  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fcf9f6;          /* cream */
+      --card: #ffffff;        /* white card */
+      --primary: #cdbef2;     /* lavender */
+      --accent: #f7c6d9;      /* soft pink */
+      --ink: #2b2b2b;         /* main text */
+      --muted: #6e6e6e;       /* secondary text */
+      --ring: rgba(205,190,242,.55);
+      --shadow: 0 10px 25px rgba(0,0,0,.06);
+      --radius: 18px;
+    }* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink); background: radial-gradient(1200px 800px at 90% -10%, #efe8ff 0%, transparent 50%),
+                      radial-gradient(900px 600px at -10% 10%, #ffeaf1 0%, transparent 50%), var(--bg);
+}
+
+/* Layout */
+.container { width: min(1120px, 92vw); margin: 0 auto; }
+.grid { display: grid; gap: 22px; }
+
+/* Header */
+header {
+  position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(252,249,246,.65); border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.brand { display:flex; align-items:center; gap:10px; font-weight: 600; }
+.logo {
+  width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 6px 16px rgba(205,190,242,.5);
+}
+.nav a { text-decoration: none; color: var(--ink); font-weight: 500; opacity: .8; }
+.links { display:flex; gap: 18px; }
+
+/* Hero */
+.hero { padding: 72px 0 48px; }
+.hero-inner { display:grid; gap: 28px; align-items: center; grid-template-columns: 1.4fr 1fr; }
+.title { font-size: clamp(32px, 6vw, 52px); line-height: 1.05; margin: 0; }
+.subtitle { color: var(--muted); margin: 8px 0 0; font-size: clamp(16px, 2vw, 18px); }
+.badges { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.badge { padding: 8px 12px; background: #fff; border-radius: 999px; border:1px solid rgba(0,0,0,.06); font-size: 14px; }
+.cta { display:flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.btn {
+  display:inline-flex; align-items:center; gap:10px; padding: 12px 18px; border-radius: 14px; border: 1px solid rgba(0,0,0,.06);
+  background:#fff; color: var(--ink); text-decoration:none; font-weight:600; box-shadow: var(--shadow);
+  transition: transform .15s ease, box-shadow .15s ease; will-change: transform;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.08); }
+.btn.primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #1f1632; border: none; }
+
+.hero-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; }
+.mock { aspect-ratio: 4/3; width: 100%; border-radius: 14px; background: 
+  linear-gradient(120deg, rgba(205,190,242,.45), rgba(247,198,217,.45));
+  display:grid; place-items:center; color:#473a66; font-weight:600; }
+
+/* Sections */
+section { padding: 54px 0; }
+.section-title { font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 6px; }
+.section-sub { color: var(--muted); margin: 0 0 22px; }
+
+/* Cards */
+.card { background: var(--card); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,.05); }
+.service { display:grid; gap: 10px; align-items:flex-start; grid-template-columns: 44px 1fr; }
+.service .icon { font-size: 28px; line-height: 44px; width:44px; height:44px; border-radius: 12px; display:grid; place-items:center; background:#faf6ff; border:1px solid rgba(0,0,0,.05); }
+.service h3 { margin: 0; font-size: 18px; }
+.service p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+
+.portfolio-grid { display:grid; gap: 20px; grid-template-columns: repeat(12, 1fr); }
+.portfolio-item { grid-column: span 6; }
+.thumb { aspect-ratio: 16/9; border-radius: 14px; background:#fff; border:1px solid rgba(0,0,0,.06); overflow:hidden; display:grid; place-items:center; color:#5a4d7e; font-weight:600; }
+.thumb small{ color: var(--muted); font-weight:500; }
+
+.actions { display:flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+
+/* Contact */
+.contact { display:grid; gap: 18px; grid-template-columns: 1.2fr 1fr; align-items: center; }
+.contact .card { padding: 26px; }
+.contact-list { display:grid; gap: 10px; }
+.pill { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius: 999px; background:#fff; border:1px solid rgba(0,0,0,.06); }
+
+/* Footer */
+footer { padding: 28px 0 46px; color: var(--muted); }
+.socials { display:flex; gap: 14px; }
+.sbtn { width:42px; height:42px; border-radius: 12px; display:grid; place-items:center; background:#fff; border:1px solid rgba(0,0,0,.06); box-shadow: var(--shadow); text-decoration:none; color:inherit; }
+.sbtn:hover { transform: translateY(-2px); }
+
+/* Responsive */
+@media (max-width: 980px){ .hero-inner{ grid-template-columns: 1fr; } .contact{ grid-template-columns: 1fr; } }
+@media (max-width: 640px){ .portfolio-item{ grid-column: span 12; } .cta{ gap:8px; } }
+
+/* Focus styles */
+a, button { outline: none; }
+a:focus-visible, .btn:focus-visible, .sbtn:focus-visible { box-shadow: 0 0 0 3px var(--ring); }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div> Aqsa</div>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>  <!-- Hero -->  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1 class="title">Hi, I’m Aqsa 👋</h1>
+        <p class="subtitle">Freelance Writer • Video Editor • Instagram Post Designer</p>
+        <div class="badges">
+          <span class="badge">Pastel • Minimal • Aesthetic</span>
+          <span class="badge">Shorts & Reels</span>
+          <span class="badge">SEO-friendly Blogs</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="https://www.upwork.com/freelancers/~0199738a5b86e6e6ec?p=1949411737842114560" target="_blank" rel="noopener">📂 View Portfolio</a>
+          <a class="btn" href="https://www.instagram.com/type_and_trim?igsh=a3pocmhicTIzODM4" target="_blank" rel="noopener">📸 Instagram</a>
+          <a class="btn" href="#contact">✉️ Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mock">Your cover image / mockup here</div>
+        <div class="actions">
+          <a class="btn" href="#portfolio">See Work</a>
+          <a class="btn" href="mailto:aqsazafar544@gmail.com">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- About -->  <section id="about">
+    <div class="container grid">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">I’m Aqsa, a creative student and freelancer. I help brands and creators with engaging blog & article writing, short-form <em>video editing</em> (shorts & reels), and aesthetic <em>Instagram post designs</em> in a soft, pastel style.</p>
+    </div>
+  </section>  <!-- Services -->  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">Pick what you need — or mix & match for a complete content kit.</p>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div class="card service">
+          <div class="icon" aria-hidden="true">✍️</div>
+          <div>
+            <h3>Blog & Article Writing</h3>
+            <p>SEO-friendly, clear and engaging content for blogs, websites, and newsletters. Topic research and on-page basics included.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon" aria-hidden="true">🎬</div>
+          <div>
+            <h3>Video Editing (Shorts & Reels)</h3>
+            <p>Snappy cuts, captions, sound design, and vertical formats optimized for Instagram Reels, YouTube Shorts, and TikTok.</p>
+          </div>
+        </div>
+        <div class="card service">
+          <div class="icon" aria-hidden="true">🎨</div>
+          <div>
+            <h3>Instagram Post Designing</h3>
+            <p>Pastel, minimal Canva designs for posts, carousels, and stories. Consistent templates to elevate your brand.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:18px;">
+        <a class="btn" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </section>  <!-- Portfolio -->  <section id="portfolio">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-sub">A quick peek at my work. More samples on Upwork & Instagram.</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item card">
+          <div class="thumb">Writing Samples<br><small>Blog & Article snippets</small></div>
+          <div class="actions">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.upwork.com/freelancers/~0199738a5b86e6e6ec?p=1949411737842114560">Open on Upwork</a>
+            <a class="btn" href="mailto:aqsazafar544@gmail.com?subject=Writing%20Project%20Inquiry">Hire for Writing</a>
+          </div>
+        </div>
+        <div class="portfolio-item card">
+          <div class="thumb">Design & Reels<br><small>Instagram posts & edits</small></div>
+          <div class="actions">
+            <a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/type_and_trim?igsh=a3pocmhicTIzODM4">View Instagram</a>
+            <a class="btn" href="mailto:aqsazafar544@gmail.com?subject=Design%2FEditing%20Project">Hire for Design/Editing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Contact -->  <section id="contact">
+    <div class="container contact">
+      <div class="card">
+        <h2 class="section-title" style="margin-bottom:10px;">Let’s Work Together ✨</h2>
+        <p class="section-sub" style="margin-bottom:18px;">Tell me about your idea — I’ll reply within 24 hours.</p>
+        <div class="contact-list">
+          <div class="pill">✉️ <a href="mailto:aqsazafar544@gmail.com" style="text-decoration:none; color:inherit;">aqsazafar544@gmail.com</a></div>
+          <div class="pill">📂 <a href="https://www.upwork.com/freelancers/~0199738a5b86e6e6ec?p=1949411737842114560" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">Upwork Portfolio</a></div>
+          <div class="pill">📸 <a href="https://www.instagram.com/type_and_trim?igsh=a3pocmhicTIzODM4" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">Instagram @type_and_trim</a></div>
+        </div>
+        <div class="cta" style="margin-top:18px;">
+          <a class="btn primary" href="mailto:aqsazafar544@gmail.com?subject=Project%20Inquiry">Start a Project</a>
+          <a class="btn" href="#services">Browse Services</a>
+        </div>
+      </div>
+      <div class="card" aria-hidden="true" style="background:linear-gradient(135deg, #fff, #fff0); border:1px dashed rgba(0,0,0,.08); display:grid; place-items:center;">
+        <div style="text-align:center;">
+          <div style="font-size:40px;">🖼️</div>
+          <p style="margin:8px 0 0; color:var(--muted)">Replace this area with your own mockup or a featured design shot.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Footer -->  <footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+      <small>© <span id="y"></span> Aqsa — All rights reserved.</small>
+      <div class="socials">
+        <a class="sbtn" target="_blank" rel="noopener" href="mailto:aqsazafar544@gmail.com" aria-label="Email">✉️</a>
+        <a class="sbtn" target="_blank" rel="noopener" href="https://www.instagram.com/type_and_trim?igsh=a3pocmhicTIzODM4" aria-label="Instagram">📸</a>
+        <a class="sbtn" target="_blank" rel="noopener" href="https://www.upwork.com/freelancers/~0199738a5b86e6e6ec?p=1949411737842114560" aria-label="Upwork">📂</a>
+      </div>
+    </div>
+  </footer>  <script>
+    // Set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script></body>
+</html>
